@@ -17,16 +17,16 @@ app.listen(port, () => console.log("Server Started on Port " + port));
 app.post('/api/login', (req, res, next) => {
     
     let userData = {
-        userName: req.body.username,
+        username: req.body.username,
         password: req.body.password
     };
 
     console.log("**********************************");
-    console.log("User Name : " + userData.userName);
+    console.log("User Name : " + userData.username);
     console.log("Password : " + userData.password);
     console.log("**********************************");
 
-    if(userData.userName == "onurbilke" && userData.password == "123456") {
+    if(userData.username == "onurbilke" && userData.password == "123456") {
         res.status(200).json({code: 1, message: "Login Successful"});
     }
     else {
